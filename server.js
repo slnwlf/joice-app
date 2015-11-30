@@ -36,7 +36,9 @@ socket.on('chat message', function (msg) {
 	});
 });
 
+
+http.listen(process.env.PORT || 3000, function() { 
 // listen on port localhost: 3000
-http.listen(3000, function() {
+// http.listen(3000, function() {
 	console.log('server started');
 });
