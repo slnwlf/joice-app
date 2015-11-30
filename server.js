@@ -7,6 +7,14 @@ var express = require('express'),
 	io = require('socket.io')(http);
 
 
+// need a database name?
+
+mongoose.connect(
+  process.env.MONGOLAB_URI ||
+  process.env.MONGOHQ_URL ||
+  'mongodb://localhost/YOUR_LOCAL_DATABASE_NAME'
+);
+
 // configure body parser
 app.use(bodyParser.urlencoded({ extended: true }));
 
