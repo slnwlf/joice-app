@@ -9,15 +9,15 @@ function buildQuestionContainer(question, previousAnswer) {
 }
 
 function buildOptionsContainer(leftOption, rightOption) {
-	return '<div><button id="left" class="btn btn-primary">' + leftOption.text + '</button></div>' +
-		'<div><button id="right" class="btn btn-primary">' + rightOption.text + '</button></div>';
+	return '<div id="left"><button class="btn btn-primary">' + leftOption.text + '</button></div>' +
+		'<div id="right"><button class="btn btn-primary">' + rightOption.text + '</button></div>';
 }
 // TODO Add previous question button to the buildQuestionContainer function 
 // Need to point to the answer.text 
 
 function respond(question, previousAnswerText) {
 	var $questionContainer = $(buildQuestionContainer(question, previousAnswerText));
-	$("#quiz-container").append($questionContainer);
+	$("#divider").append($questionContainer);
 
 	var leftOption = question.options[0];
 	var rightOption = question.options[1];
@@ -29,9 +29,13 @@ function respond(question, previousAnswerText) {
 }
 function done(lastAnswer){
 	console.log("its over");
-	$("#reply").html("<p>hi</p>");
+	var $likeButton = $('<button type="button" id="like" class="btn btn-default button-center">Like</button>');
+	var $solution = $('<div class="text"><p>This recipe looks delicious.  What do you think?</p></div>');
+	var $zucchini = $('<img class="solution" src="images/zucchini.jpg">');
+	$("#reply").append($solution);
+		$("#reply").html($likeButton);
+		$("#last-solution").html($zucchini);
 }
-
 function answerQuestion($answerButton, answer) {
 	$answerButton.on("click", function() {
 		if (answer.nextQuestion === null) {

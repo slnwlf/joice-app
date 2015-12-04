@@ -72,7 +72,6 @@ app.get('/api/questions/:id', function(req, res) {
 });
 
 
-
 // GET API route for questions with query start = true, /api/questions?start=true 
 
 // GET API route for res.json(first)  - done - tested in postman
@@ -80,10 +79,6 @@ app.get('/api/questions/:id', function(req, res) {
 // GET API route and res.json(found)  api/questions/:id - done - tested in postman
 
 // GET /  res.render html page - done - localhost:3000 is working
-
-// How connect these routes to front end?
-
-// Rename API routes so they are more logical /
 
 
 

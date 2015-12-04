@@ -22,7 +22,7 @@ body {
 	clear: all;
 }
 .button-center {
-	margin: 0 auto; 
+	margin: 7px auto; 
     display: block;
 }
 #quiz-container {
@@ -34,17 +34,17 @@ body {
 }
 #left {
 	float: left; 
-	width: 48%;
+	width: 47%;
 	height: 45px;
-	margin: 3px;
+	margin: 7px;
 	text-align: right;
 /*	border: black solid 1px;*/
 }
 #right {
 	float: left; 
-	width: 48%;
+	width: 47%;
 	height: 45px;
-	margin: 3px;
+	margin: 7px;
 	text-align: left;
 /*	border: black solid 1px;*/
 }
@@ -55,11 +55,9 @@ body {
 	text-align: left; 
 	clear: all;
 }
-/*#mobile {
-	width: 100%; 
-	height: auto; 
-	display: inline-block;
-}*/
+#last-solution {
+	text-align: center;
+}
 .icon {
 	width: 9%;
 	margin: 0 auto;
