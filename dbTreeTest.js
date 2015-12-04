@@ -3,8 +3,11 @@ console.log("dbTreeTest script file is running.");
 
 var mongoose = require('mongoose');
 console.log("connecting to Mongo.");
-mongoose.connect('mongodb://localhost/relationTest');
-
+mongoose.connect(
+	process.env.MONGOLAB_URI ||
+	process.env.MONGOHQ_URL ||
+	'mongodb://localhost/relationTest'
+);
 var Schema = mongoose.Schema;
 
 // Create question and answer schemas 
