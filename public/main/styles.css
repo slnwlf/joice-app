@@ -55,6 +55,9 @@ body {
 	text-align: left; 
 	clear: all;
 }
+#like:target {
+	background-color: black; 
+}
 #last-solution {
 	text-align: center;
 }
