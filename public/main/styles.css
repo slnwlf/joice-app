@@ -58,6 +58,9 @@ body {
 #last-solution {
 	text-align: center;
 }
+.solution {
+	margin: 0 0 10px 0;
+}
 .icon {
 	width: 9%;
 	margin: 0 auto;
