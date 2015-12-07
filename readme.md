@@ -14,9 +14,17 @@ As a highlight, the only GET call is to get the first question.  The questions a
 
 So the system is extremely scalable and editable.
 
-Next:
+Next features
 
-Next I would like to add solutions to the database.  And present various solutions based on answers to the questions.  And a reset button.   And make it more responsive.  And add testing.  And add users and favorites.  And an API connection to a recipe database. 
+-I would like to add 8 solutions; one for each path.
+-I would like to add solutions to the database.  (Currently there is one solution hardcoded)
+-And present various solutions based on answers to the questions.   For example 3 solutions that can be seen via a 'more' button. 
+-And a reset button that lets the user start from the beginning. 
+-And make it more responsive.  
+-And an API connection to a recipe database (Yummly or Edanam)
+-BUG -  mobile alert panel is not responisive
+-BUG -  the solution (Zuchinni) is bolted on to the end of the "#quiz-container" div in a very brute force way.  Should be more graceful via .append() method
+-BUG - auto scrolling with content is added
 
 Of note:
 
