@@ -17,7 +17,7 @@ function buildOptionsContainer(leftOption, rightOption) {
 
 function respond(question, previousAnswerText) {
 	var $questionContainer = $(buildQuestionContainer(question, previousAnswerText));
-	$("#divider").append($questionContainer);
+	$("#quiz-container").append($questionContainer);
 
 	var leftOption = question.options[0];
 	var rightOption = question.options[1];
@@ -34,7 +34,7 @@ function done(lastAnswer){
 	var $zucchini = $('<img class="solution" src="images/zucchini.jpg">');
 	$("#reply").append($solution);
 		$("#reply").html($likeButton);
-		$("#last-solution").html($zucchini);
+		$("#quiz-container").append($zucchini);
 }
 function answerQuestion($answerButton, answer) {
 	$answerButton.on("click", function() {
@@ -56,6 +56,12 @@ $(document).ready(function() {
 		var previousAnswerText = $(this).text();
 		$.get('/api/questions?start=true', function(question) {
 			respond(question, previousAnswerText);
+		});
+
+		// Auto-scroll functionality
+		$('#reply').click(function (event) {
+			$("#quiz-container").animate({ scrollTop: "1000" }, "slow");
+			return false;
 		});
 	});
 
