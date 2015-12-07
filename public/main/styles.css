@@ -92,7 +92,7 @@ body {
 .scroll {
 /*	width: 100px;*/
     height: 400px;
-    overflow: scroll;
+    overflow: auto;
 }
 #div12 {
 	text-align: center; 
